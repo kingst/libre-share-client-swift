@@ -74,14 +74,15 @@ public class ShareClientManager: CGMManager {
 
             // Ignore glucose values that are up to a minute newer than our previous value, to account for possible time shifting in Share data
             let startDate = self.cgmManagerDelegate?.startDateToFilterNewData(for: self)?.addingTimeInterval(TimeInterval(minutes: 1))
-            let newGlucose = glucose.filterDateRange(startDate, nil).filter({ $0.isStateValid }).map {
+            let newGlucose = glucose.filterDateRange(startDate, nil)
+            let newSamples = newGlucose.filter({ $0.isStateValid }).map {
                 return NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, isDisplayOnly: false, syncIdentifier: "\(Int($0.startDate.timeIntervalSince1970))", device: self.device)
             }
 
-            self.latestBackfill = glucose.first
+            self.latestBackfill = newGlucose.first
 
-            if newGlucose.count > 0 {
-                completion(.newData(newGlucose))
+            if newSamples.count > 0 {
+                completion(.newData(newSamples))
             } else {
                 completion(.noData)
             }

@@ -37,10 +37,10 @@ public class ShareClientSettingsViewController: UITableViewController {
 
         title = cgmManager.localizedTitle
 
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 44
 
-        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
+        tableView.sectionHeaderHeight = UITableView.automaticDimension
         tableView.estimatedSectionHeaderHeight = 55
 
         tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.className)
@@ -49,24 +49,20 @@ public class ShareClientSettingsViewController: UITableViewController {
 
     // MARK: - UITableViewDataSource
 
-    private enum Section: Int {
+    private enum Section: Int, CaseIterable {
         case authentication
         case latestReading
         case delete
-
-        static let count = 3
     }
 
     override public func numberOfSections(in tableView: UITableView) -> Int {
-        return allowsDeletion ? Section.count : Section.count - 1
+        return allowsDeletion ? Section.allCases.count : Section.allCases.count - 1
     }
 
-    private enum LatestReadingRow: Int {
+    private enum LatestReadingRow: Int, CaseIterable {
         case glucose
         case date
         case trend
-
-        static let count = 3
     }
 
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -74,7 +70,7 @@ public class ShareClientSettingsViewController: UITableViewController {
         case .authentication:
             return 1
         case .latestReading:
-            return LatestReadingRow.count
+            return LatestReadingRow.allCases.count
         case .delete:
             return 1
         }
