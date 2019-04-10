@@ -72,6 +72,13 @@
 			remoteGlobalIDString = 432B0E871CDFC3C50045347B;
 			remoteInfo = ShareClient;
 		};
+		A9E521F6225E949400EDDEF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 432B0E7F1CDFC3C50045347B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 432B0E871CDFC3C50045347B;
+			remoteInfo = ShareClient;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -320,6 +327,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				A9E521F7225E949400EDDEF2 /* PBXTargetDependency */,
 				4325E9D9210E715200969CE5 /* PBXTargetDependency */,
 			);
 			name = ShareClientUI;
@@ -483,6 +491,11 @@
 			isa = PBXTargetDependency;
 			target = 432B0E871CDFC3C50045347B /* ShareClient */;
 			targetProxy = 432B0E941CDFC3C50045347B /* PBXContainerItemProxy */;
+		};
+		A9E521F7225E949400EDDEF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 432B0E871CDFC3C50045347B /* ShareClient */;
+			targetProxy = A9E521F6225E949400EDDEF2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
