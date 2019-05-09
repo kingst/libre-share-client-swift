@@ -325,9 +325,9 @@
 			productReference = 43A8EC82210E664300A81379 /* ShareClientUI.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A9ED4D91225EB4D30080DEBA /* ShareClient watchOS */ = {
+		A9ED4D91225EB4D30080DEBA /* ShareClient-watchOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A9ED4DA1225EB4D30080DEBA /* Build configuration list for PBXNativeTarget "ShareClient watchOS" */;
+			buildConfigurationList = A9ED4DA1225EB4D30080DEBA /* Build configuration list for PBXNativeTarget "ShareClient-watchOS" */;
 			buildPhases = (
 				A9ED4D92225EB4D30080DEBA /* Sources */,
 				A9ED4D9A225EB4D30080DEBA /* Frameworks */,
@@ -338,7 +338,7 @@
 			);
 			dependencies = (
 			);
-			name = "ShareClient watchOS";
+			name = "ShareClient-watchOS";
 			productName = ShareClient;
 			productReference = A9ED4DA4225EB4D30080DEBA /* ShareClient.framework */;
 			productType = "com.apple.product-type.framework";
@@ -391,7 +391,7 @@
 			projectRoot = "";
 			targets = (
 				432B0E871CDFC3C50045347B /* ShareClient */,
-				A9ED4D91225EB4D30080DEBA /* ShareClient watchOS */,
+				A9ED4D91225EB4D30080DEBA /* ShareClient-watchOS */,
 				432B0E911CDFC3C50045347B /* ShareClientTests */,
 				43A8EC81210E664300A81379 /* ShareClientUI */,
 			);
@@ -925,7 +925,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A9ED4DA1225EB4D30080DEBA /* Build configuration list for PBXNativeTarget "ShareClient watchOS" */ = {
+		A9ED4DA1225EB4D30080DEBA /* Build configuration list for PBXNativeTarget "ShareClient-watchOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A9ED4DA2225EB4D30080DEBA /* Debug */,

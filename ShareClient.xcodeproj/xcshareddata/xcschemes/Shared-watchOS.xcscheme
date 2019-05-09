@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "A9ED4D91225EB4D30080DEBA"
                BuildableName = "ShareClient.framework"
-               BlueprintName = "ShareClient watchOS"
+               BlueprintName = "ShareClient-watchOS"
                ReferencedContainer = "container:ShareClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9ED4D91225EB4D30080DEBA"
             BuildableName = "ShareClient.framework"
-            BlueprintName = "ShareClient watchOS"
+            BlueprintName = "ShareClient-watchOS"
             ReferencedContainer = "container:ShareClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "A9ED4D91225EB4D30080DEBA"
             BuildableName = "ShareClient.framework"
-            BlueprintName = "ShareClient watchOS"
+            BlueprintName = "ShareClient-watchOS"
             ReferencedContainer = "container:ShareClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
