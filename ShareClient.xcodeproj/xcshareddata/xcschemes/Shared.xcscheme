@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1020"
+   LastUpgradeVersion = "1010"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
-      buildImplicitDependencies = "YES">
+      buildImplicitDependencies = "NO">
       <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "432B0E871CDFC3C50045347B"
+               BuildableName = "ShareClient.framework"
+               BlueprintName = "ShareClient"
+               ReferencedContainer = "container:ShareClient.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
@@ -29,6 +43,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "432B0E871CDFC3C50045347B"
+            BuildableName = "ShareClient.framework"
+            BlueprintName = "ShareClient"
+            ReferencedContainer = "container:ShareClient.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -45,9 +68,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43A8EC81210E664300A81379"
-            BuildableName = "ShareClientUI.framework"
-            BlueprintName = "ShareClientUI"
+            BlueprintIdentifier = "432B0E871CDFC3C50045347B"
+            BuildableName = "ShareClient.framework"
+            BlueprintName = "ShareClient"
             ReferencedContainer = "container:ShareClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -63,9 +86,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "43A8EC81210E664300A81379"
-            BuildableName = "ShareClientUI.framework"
-            BlueprintName = "ShareClientUI"
+            BlueprintIdentifier = "432B0E871CDFC3C50045347B"
+            BuildableName = "ShareClient.framework"
+            BlueprintName = "ShareClient"
             ReferencedContainer = "container:ShareClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
