@@ -1,7 +1,9 @@
 language: objective-c
-osx_image: xcode10
+osx_image: xcode10.2
 
+before_script:
+    - carthage bootstrap
 
 script:
-# Build Travis project and run tests
-- xcodebuild -project ShareClient.xcodeproj -scheme ShareClient build -destination name="iPhone SE" test
+    # Build Travis project and run tests
+    - xcodebuild -project ShareClient.xcodeproj -scheme Shared build -destination name="iPhone SE" test 
