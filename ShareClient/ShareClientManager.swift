@@ -10,6 +10,7 @@ import HealthKit
 
 
 public class ShareClientManager: CGMManager {
+
     public static var managerIdentifier = "DexShareClient"
 
     public init() {
@@ -119,3 +120,15 @@ public class ShareClientManager: CGMManager {
         ].joined(separator: "\n")
     }
 }
+
+// MARK: - DeviceAlertResponder implementation
+extension ShareClientManager {
+    public func acknowledgeAlert(alertIdentifier: DeviceAlert.AlertIdentifier) { }
+}
+
+// MARK: - DeviceAlertSoundVendor implementation
+extension ShareClientManager {
+    public func getSoundBaseURL() -> URL? { return nil }
+    public func getSounds() -> [DeviceAlert.Sound] { return [] }
+}
+
