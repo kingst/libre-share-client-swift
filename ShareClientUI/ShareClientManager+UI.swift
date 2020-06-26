@@ -5,10 +5,10 @@
 //  Copyright © 2018 LoopKit Authors. All rights reserved.
 //
 
+import LoopKit
 import LoopKitUI
 import HealthKit
 import ShareClient
-
 
 extension ShareClientManager: CGMManagerUI {
     public static func setupViewController() -> (UIViewController & CGMManagerSetupViewController & CompletionNotifying)? {
