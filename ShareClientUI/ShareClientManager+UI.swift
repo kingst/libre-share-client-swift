@@ -5,10 +5,10 @@
 //  Copyright © 2018 LoopKit Authors. All rights reserved.
 //
 
+import LoopKit
 import LoopKitUI
 import HealthKit
 import ShareClient
-
 
 extension ShareClientManager: CGMManagerUI {
     public static func setupViewController() -> (UIViewController & CGMManagerSetupViewController & CompletionNotifying)? {
@@ -22,6 +22,16 @@ extension ShareClientManager: CGMManagerUI {
     }
 
     public var smallImage: UIImage? {
+        return nil
+    }
+    
+    // TODO Placeholder. This functionality will come with LOOP-1311
+    public var cgmStatusHighlight: DeviceStatusHighlight? {
+        return nil
+    }
+    
+    // TODO Placeholder. This functionality will come with LOOP-1311
+    public var cgmLifecycleProgress: DeviceLifecycleProgress? {
         return nil
     }
 }
