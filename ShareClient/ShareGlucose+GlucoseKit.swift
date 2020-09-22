@@ -22,7 +22,7 @@ extension ShareGlucose: GlucoseValue {
 }
 
 
-extension ShareGlucose: SensorDisplayable {
+extension ShareGlucose: GlucoseDisplayable {
     public var isStateValid: Bool {
         return glucose >= 39
     }
@@ -36,12 +36,12 @@ extension ShareGlucose: SensorDisplayable {
     }
     
     // TODO Placeholder. This functionality will come with LOOP-1311
-    public var glucoseValueType: GlucoseValueType? {
+    public var glucoseRangeCategory: GlucoseRangeCategory? {
         return nil
     }
 }
 
-extension SensorDisplayable {
+extension GlucoseDisplayable {
     public var stateDescription: String {
         if isStateValid {
             return LocalizedString("OK", comment: "Sensor state description for the valid state")
