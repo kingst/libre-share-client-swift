@@ -64,6 +64,10 @@ public class ShareClientManager: CGMManager {
     public var glucoseDisplay: GlucoseDisplayable? {
         return latestBackfill
     }
+    
+    public var hasValidSensorSession: Bool {
+        return shareService.isAuthorized
+    }
 
     public let managedDataInterval: TimeInterval? = nil
 
