@@ -66,7 +66,7 @@ public class ShareClientManager: CGMManager {
         return latestBackfill
     }
     
-    public var status: CGMManagerStatus {
+    public var cgmStatus: CGMManagerStatus {
         return CGMManagerStatus(hasValidSensorSession: hasValidSensorSession)
     }
 
