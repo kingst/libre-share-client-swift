@@ -10,6 +10,7 @@ import HealthKit
 
 
 public class ShareClientManager: CGMManager {
+    
 
     public static var managerIdentifier = "DexShareClient"
 
@@ -65,6 +66,10 @@ public class ShareClientManager: CGMManager {
         return latestBackfill
     }
     
+    public var status: CGMManagerStatus {
+        return CGMManagerStatus(hasValidSensorSession: hasValidSensorSession)
+    }
+
     public var hasValidSensorSession: Bool {
         return shareService.isAuthorized
     }
