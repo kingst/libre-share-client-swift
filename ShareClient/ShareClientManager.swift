@@ -78,7 +78,7 @@ public class ShareClientManager: CGMManager {
 
     public private(set) var latestBackfill: ShareGlucose?
 
-    public func fetchNewDataIfNeeded(_ completion: @escaping (CGMResult) -> Void) {
+    public func fetchNewDataIfNeeded(_ completion: @escaping (CGMReadingResult) -> Void) {
         guard let shareClient = shareService.client else {
             completion(.noData)
             return
