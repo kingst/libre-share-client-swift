@@ -12,7 +12,7 @@ import HealthKit
 public class ShareClientManager: CGMManager {
     
 
-    public static var managerIdentifier = "DexShareClient"
+    public let managerIdentifier = "DexShareClient"
 
     public init() {
         shareService = ShareService(keychainManager: keychain)
@@ -34,7 +34,7 @@ public class ShareClientManager: CGMManager {
         }
     }
 
-    public static let localizedTitle = LocalizedString("Dexcom Share", comment: "Title for the CGMManager option")
+    public let localizedTitle = LocalizedString("Dexcom Share", comment: "Title for the CGMManager option")
 
     public let appURL: URL? = nil
 
