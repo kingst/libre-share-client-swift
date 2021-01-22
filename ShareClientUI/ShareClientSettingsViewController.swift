@@ -11,12 +11,11 @@ import LoopKit
 import LoopKitUI
 import ShareClient
 
-
 public class ShareClientSettingsViewController: UITableViewController {
 
     public let cgmManager: ShareClientManager
 
-    public let glucoseUnit: HKUnit
+    private var glucoseUnit: HKUnit
 
     public let allowsDeletion: Bool
 
@@ -213,5 +212,12 @@ private extension UIAlertController {
 
         let cancel = LocalizedString("Cancel", comment: "The title of the cancel action in an action sheet")
         addAction(UIAlertAction(title: cancel, style: .cancel, handler: nil))
+    }
+}
+
+extension ShareClientSettingsViewController: PreferredGlucoseUnitObserver {
+    public func preferredGlucoseUnitDidChange(to preferredGlucoseUnit: HKUnit) {
+        self.glucoseUnit = preferredGlucoseUnit
+        tableView.reloadData()
     }
 }

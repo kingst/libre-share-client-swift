@@ -10,7 +10,6 @@ import HealthKit
 
 
 public class ShareClientManager: CGMManager {
-    
 
     public let managerIdentifier = "DexShareClient"
 
@@ -140,4 +139,3 @@ extension ShareClientManager {
     public func getSoundBaseURL() -> URL? { return nil }
     public func getSounds() -> [Alert.Sound] { return [] }
 }
-
