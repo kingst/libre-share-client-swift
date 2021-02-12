@@ -25,6 +25,8 @@ public class ShareClientManager: CGMManager {
         return [:]
     }
 
+    public let isOnboarded = true   // No distinction between created and onboarded
+
     private let keychain = KeychainManager()
 
     public var shareService: ShareService {
