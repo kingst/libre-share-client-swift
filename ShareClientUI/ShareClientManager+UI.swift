@@ -26,12 +26,17 @@ extension ShareClientManager: CGMManagerUI {
         return nil
     }
 
-    // TODO Placeholder. This functionality will come with LOOP-1311
+    // TODO Placeholder.
     public var cgmStatusHighlight: DeviceStatusHighlight? {
         return nil
     }
 
-    // TODO Placeholder. This functionality will come with LOOP-1311
+    // TODO Placeholder.
+    public var cgmStatusBadge: DeviceStatusBadge? {
+        return nil
+    }
+
+    // TODO Placeholder.
     public var cgmLifecycleProgress: DeviceLifecycleProgress? {
         return nil
     }
