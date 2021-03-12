@@ -16,8 +16,8 @@ extension ShareClientManager: CGMManagerUI {
         return .userInteractionRequired(ShareClientSetupViewController())
     }
 
-    public func settingsViewController(for preferredGlucoseUnit: HKUnit, colorPalette: LoopUIColorPalette) -> (UIViewController & CGMManagerOnboardNotifying & PreferredGlucoseUnitObserver & CompletionNotifying) {
-        let settings = ShareClientSettingsViewController(cgmManager: self, glucoseUnit: preferredGlucoseUnit, allowsDeletion: true)
+    public func settingsViewController(for displayGlucoseUnitObservable: DisplayGlucoseUnitObservable, colorPalette: LoopUIColorPalette) -> (UIViewController & CGMManagerOnboardNotifying & CompletionNotifying) {
+        let settings = ShareClientSettingsViewController(cgmManager: self, displayGlucoseUnitObservable: displayGlucoseUnitObservable, allowsDeletion: true)
         let nav = CGMManagerSettingsNavigationViewController(rootViewController: settings)
         return nav
     }
