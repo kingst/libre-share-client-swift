@@ -12,6 +12,10 @@ import HealthKit
 import ShareClient
 
 extension ShareClientManager: CGMManagerUI {
+    public static var onboardingImage: UIImage? {
+        return nil
+    }
+    
     public static func setupViewController(bluetoothProvider: BluetoothProvider, displayGlucoseUnitObservable: DisplayGlucoseUnitObservable, colorPalette: LoopUIColorPalette) -> SetupUIResult<CGMManagerViewController, CGMManagerUI> {
         return .userInteractionRequired(ShareClientSetupViewController())
     }
