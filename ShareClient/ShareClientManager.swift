@@ -107,7 +107,7 @@ public class ShareClientManager: CGMManager {
             }
             let newGlucose = glucose.filterDateRange(startDate, nil)
             let newSamples = newGlucose.filter({ $0.isStateValid }).map {
-                return NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, trend: $0.trendType, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int($0.startDate.timeIntervalSince1970))", device: self.device)
+                return NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, condition: $0.condition, trend: $0.trendType, trendRate: $0.trendRate, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int($0.startDate.timeIntervalSince1970))", device: self.device)
             }
 
             self.latestBackfill = newGlucose.first
