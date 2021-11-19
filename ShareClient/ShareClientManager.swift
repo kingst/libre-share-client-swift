@@ -68,7 +68,7 @@ public class ShareClientManager: CGMManager {
     }
     
     public var cgmManagerStatus: CGMManagerStatus {
-        return CGMManagerStatus(hasValidSensorSession: hasValidSensorSession)
+        return CGMManagerStatus(hasValidSensorSession: hasValidSensorSession, device: device)
     }
 
     public var hasValidSensorSession: Bool {
