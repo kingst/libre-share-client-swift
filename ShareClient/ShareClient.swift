@@ -184,12 +184,25 @@ public class ShareClient {
 
                     var transformed: Array<ShareGlucose> = []
                     for sgv in sgvs {
-                        if let glucose = sgv["Value"] as? Int, let trend = sgv["Trend"] as? Int, let wt = sgv["WT"] as? String {
-                            transformed.append(ShareGlucose(
-                                glucose: UInt16(glucose),
-                                trend: UInt8(trend),
-                                timestamp: try self.parseDate(wt)
-                            ))
+                        if let glucose = sgv["Value"] as? Int, let wt = sgv["WT"] as? String {
+                            let trend: Int?
+                            if let trendString = sgv["Trend"] as? String {
+                                // Dec 2021, Dexcom Share modified json encoding of Trend from int to string
+                                let trendmap = ["": 0, "DoubleUp":1, "SingleUp":2, "FortyFiveUp":3, "Flat":4, "FortyFiveDown":5, "SingleDown":6, "DoubleDown": 7, "NotComputable":8, "RateOutOfRange":9]
+                                trend = trendmap[trendString, default: 0]
+                            } else {
+                                trend = sgv["Trend"] as? Int
+                            }
+                            
+                            if let trend = trend {
+                                transformed.append(ShareGlucose(
+                                    glucose: UInt16(glucose),
+                                    trend: UInt8(trend),
+                                    timestamp: try self.parseDate(wt)
+                                ))
+                            } else {
+                                throw ShareError.dataError(reason: "Failed to decode. SGV record had bad trend: " + response)
+                            }
                         } else {
                             throw ShareError.dataError(reason: "Failed to decode an SGV record: " + response)
                         }
