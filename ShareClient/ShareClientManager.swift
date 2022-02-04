@@ -12,20 +12,9 @@ import HealthKit
 public class ShareClientManager: CGMManager {
 
     public let managerIdentifier = "DexShareClient"
-    
+
     public init() {
         shareService = ShareService(keychainManager: keychain)
-        scheduleNextFetch()
-    }
-    
-    private func scheduleNextFetch() {
-        let sleepWindow = TimeInterval(minutes: 5.2)
-        let minDelay = TimeInterval(seconds: 30)
-        let lastValidTime = latestBackfill?.startDate ?? .distantPast
-        let nextFetchTime = min(sleepWindow, max(minDelay, sleepWindow - Date().timeIntervalSince(lastValidTime)))
-        DispatchQueue.main.asyncAfter(deadline: .now() + nextFetchTime) { [weak self] in
-            self?.timerTriggeredFetch()
-        }
     }
 
     required convenience public init?(rawState: CGMManager.RawStateValue) {
@@ -89,16 +78,6 @@ public class ShareClientManager: CGMManager {
     public let managedDataInterval: TimeInterval? = nil
 
     public private(set) var latestBackfill: ShareGlucose?
-    
-    private func timerTriggeredFetch() {
-        self.fetchNewDataIfNeeded { result in
-            defer { self.scheduleNextFetch() }
-            guard case .newData = result else { return }
-            self.delegate.notify { delegate in
-                delegate?.cgmManager(self, hasNew: result)
-            }
-        }
-    }
 
     public func fetchNewDataIfNeeded(_ completion: @escaping (CGMReadingResult) -> Void) {
         guard let shareClient = shareService.client else {
