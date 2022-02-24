@@ -10,6 +10,10 @@ import ShareClient
 
 
 extension ShareService: ServiceAuthenticationUI {
+    public var credentialFormFieldHelperMessage: String? {
+        return nil
+    }
+
     public var credentialFormFields: [ServiceCredential] {
         return [
             ServiceCredential(
