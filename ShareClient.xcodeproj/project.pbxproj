@@ -141,6 +141,8 @@
 		B40BF26423ABD4E600A43CEE /* ShareClientPlugin-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShareClientPlugin-Bridging-Header.h"; sourceTree = "<group>"; };
 		B40BF26523ABD4E700A43CEE /* ShareClientPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareClientPlugin.swift; sourceTree = "<group>"; };
 		B40BF26723ABD55200A43CEE /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
+		F5D9C04227DAC15A002E48F6 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F5D9C04327DAC15A002E48F6 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -464,6 +466,7 @@
 				ro,
 				fi,
 				da,
+				tr,
 			);
 			mainGroup = 432B0E7E1CDFC3C50045347B;
 			productRefGroup = 432B0E891CDFC3C50045347B /* Products */;
@@ -645,6 +648,7 @@
 				7D9BF12C2336FFA2005DCFD6 /* ro */,
 				7D9BF12E2336FFA9005DCFD6 /* fi */,
 				7D9BF1302336FFAF005DCFD6 /* da */,
+				F5D9C04327DAC15A002E48F6 /* tr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -669,6 +673,7 @@
 				7D9BF12B2336FFA2005DCFD6 /* ro */,
 				7D9BF12D2336FFA9005DCFD6 /* fi */,
 				7D9BF12F2336FFAF005DCFD6 /* da */,
+				F5D9C04227DAC15A002E48F6 /* tr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
