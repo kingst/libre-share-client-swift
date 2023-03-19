@@ -15,7 +15,7 @@
 "Delete CGM" = "CGM Sil";
 
 /* Title describing glucose value */
-"Glucose" = "KŞ";
+"Glucose" = "Kan şekeri";
 
 /* Section title for latest glucose reading */
 "Latest Reading" = "Son Okuma";

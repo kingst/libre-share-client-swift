@@ -15,7 +15,7 @@
 "Delete CGM" = "Elimina CGM";
 
 /* Title describing glucose value */
-"Glucose" = "Glicemie";
+"Glucose" = "Glicemia";
 
 /* Section title for latest glucose reading */
 "Latest Reading" = "Ultima lettura";
@@ -30,7 +30,7 @@
 "Server" = "Server";
 
 /* Title describing glucose trend */
-"Trend" = "Andamento";
+"Trend" = "Tendenza";
 
 /* U.S. share server option title */
 "US" = "USA";

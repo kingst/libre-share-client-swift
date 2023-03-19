@@ -12,10 +12,10 @@
 
 /* Button title to delete CGM
    Title text for the button to remove a CGM from Loop */
-"Delete CGM" = "Удалить мониторинг";
+"Delete CGM" = "Удалить CGM";
 
 /* Title describing glucose value */
-"Glucose" = "Гликемия";
+"Glucose" = "Глюкоза";
 
 /* Section title for latest glucose reading */
 "Latest Reading" = "Последние данные";

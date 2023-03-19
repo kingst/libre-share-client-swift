@@ -30,7 +30,7 @@
 "Server" = "Server";
 
 /* Title describing glucose trend */
-"Trend" = "Trend";
+"Trend" = "מגמה";
 
 /* U.S. share server option title */
 "US" = "US";
