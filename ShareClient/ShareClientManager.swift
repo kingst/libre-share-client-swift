@@ -10,9 +10,11 @@ import HealthKit
 
 
 public class ShareClientManager: CGMManager {
-
-    public let managerIdentifier = "DexShareClient"
-
+    public static let staticManagerIdentifier = "LibreLinkUpClient"
+    public let managerIdentifier = ShareClientManager.staticManagerIdentifier
+    public static let staticLocalizedTitle = LocalizedString("Libre LinkUp", comment: "Title for the CGMManager option")
+    public let localizedTitle = ShareClientManager.staticLocalizedTitle
+    
     public init() {
         shareService = ShareService(keychainManager: keychain)
     }
@@ -34,8 +36,6 @@ public class ShareClientManager: CGMManager {
             try! keychain.setDexcomShareUsername(shareService.username, password: shareService.password, url: shareService.url)
         }
     }
-
-    public let localizedTitle = LocalizedString("Dexcom Share", comment: "Title for the CGMManager option")
 
     public let appURL: URL? = nil
 
@@ -110,7 +110,7 @@ public class ShareClientManager: CGMManager {
                 return NewGlucoseSample(date: $0.startDate, quantity: $0.quantity, condition: $0.condition, trend: $0.trendType, trendRate: $0.trendRate, isDisplayOnly: false, wasUserEntered: false, syncIdentifier: "\(Int($0.startDate.timeIntervalSince1970))", device: self.device)
             }
 
-            self.latestBackfill = newGlucose.first
+            self.latestBackfill = newGlucose.last
 
             if newSamples.count > 0 {
                 completion(.newData(newSamples))

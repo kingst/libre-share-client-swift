@@ -14,7 +14,7 @@ import LoopKit
 public class ShareService: ServiceAuthentication {
     public var credentialValues: [String?]
 
-    public let title: String = LocalizedString("Dexcom Share", comment: "The title of the Dexcom Share service")
+    public let title: String = LocalizedString("Libre LinkUp", comment: "The title of the Dexcom Share service")
 
     public init(username: String?, password: String?, url: URL?) {
         credentialValues = [
@@ -88,7 +88,7 @@ public class ShareService: ServiceAuthentication {
 
 
 private let DexcomShareURL = URL(string: KnownShareServers.US.rawValue)!
-private let DexcomShareServiceLabel = "DexcomShare2"
+private let DexcomShareServiceLabel = "LibreLinkUp"
 
 
 extension KeychainManager {
