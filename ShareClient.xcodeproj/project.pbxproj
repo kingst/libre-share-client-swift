@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B7C6D982B0849B00030DFA7 /* LibreApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C6D972B0849B00030DFA7 /* LibreApi.swift */; };
+		3B7C6D9A2B0849B90030DFA7 /* LibreApiObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7C6D992B0849B90030DFA7 /* LibreApiObjects.swift */; };
 		4325E9CF210E6A0A00969CE5 /* HKUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325E9CE210E6A0A00969CE5 /* HKUnit.swift */; };
 		4325E9D1210E6A3D00969CE5 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325E9D0210E6A3D00969CE5 /* TimeInterval.swift */; };
 		4325E9D3210E6ADA00969CE5 /* IdentifiableClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4325E9D2210E6ADA00969CE5 /* IdentifiableClass.swift */; };
@@ -64,6 +66,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3B7C6D972B0849B00030DFA7 /* LibreApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreApi.swift; sourceTree = "<group>"; };
+		3B7C6D992B0849B90030DFA7 /* LibreApiObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibreApiObjects.swift; sourceTree = "<group>"; };
 		4325E9CE210E6A0A00969CE5 /* HKUnit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HKUnit.swift; sourceTree = "<group>"; };
 		4325E9D0210E6A3D00969CE5 /* TimeInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
 		4325E9D2210E6ADA00969CE5 /* IdentifiableClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IdentifiableClass.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 			children = (
 				43AB5125213315D300B3D58D /* Localizable.strings */,
 				4325E9CE210E6A0A00969CE5 /* HKUnit.swift */,
+				3B7C6D972B0849B00030DFA7 /* LibreApi.swift */,
+				3B7C6D992B0849B90030DFA7 /* LibreApiObjects.swift */,
 				43C418AE1CE0488900405B6A /* ShareClient.swift */,
 				43A8EC9C210E68CE00A81379 /* ShareClientManager.swift */,
 				43A8EC9A210E68BA00A81379 /* ShareGlucose+GlucoseKit.swift */,
@@ -475,6 +481,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B7C6D9A2B0849B90030DFA7 /* LibreApiObjects.swift in Sources */,
+				3B7C6D982B0849B00030DFA7 /* LibreApi.swift in Sources */,
 				4325E9CF210E6A0A00969CE5 /* HKUnit.swift in Sources */,
 				4325E9D1210E6A3D00969CE5 /* TimeInterval.swift in Sources */,
 				B40BF26823ABD55200A43CEE /* OSLog.swift in Sources */,
